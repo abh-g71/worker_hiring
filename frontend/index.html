@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Worker Registration</title>
-    <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worker Hiring Portal</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-    <h1>Register Worker</h1>
-     <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" placeholder="Enter worker name" required/>
+  <div class="container">
+    <h1>Worker Registration</h1>
+    <form id="workerForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter worker name" required />
+      </div>
 
-        <label for="phone">Phone NUmber:</label>
-        <input type="text" id="phone" placeholder="Enter phone number" pattern="[0-9]{7,15}" required/>
+      <div class="form-group">
+        <label for="skill">Skill</label>
+        <input type="text" id="skill" placeholder="e.g. Electrician, Plumber" required />
+      </div>
 
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="Enter email address" required/>
-        
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" placeholder="Enter city or area" required />
+      </div>
 
-        <button type="submit">Register</button>
-     </form>
-    </div>
+      <div class="form-group">
+        <label for="phone">Contact Number</label>
+        <input type="tel" id="phone" placeholder="Enter phone number" required />
+      </div>
+
+      <button type="submit" class="btn">Register Worker</button>
+    </form>
+  </div>
 </body>
 </html>

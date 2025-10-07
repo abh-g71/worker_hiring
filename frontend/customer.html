@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post a Job - Worker Hiring App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>Worker Hiring</h1>
+      <p>Post a job to hire local workers</p>
+    </header>
+
+    <main class="form-wrapper">
+      <div class="form-card">
+        <h2>Post a Job</h2>
+        <form id="jobForm">
+          <div class="input-group">
+            <label for="jobTitle">Job Title</label>
+            <input type="text" id="jobTitle" placeholder="e.g., Fix Plumbing Issue" required />
+          </div>
+
+          <div class="input-group">
+            <label for="jobDescription">Description</label>
+            <textarea id="jobDescription" placeholder="Describe the job in detail" rows="4" required></textarea>
+          </div>
+
+          <div class="input-group">
+            <label for="skill">Required Skill</label>
+            <input type="text" id="skill" placeholder="e.g., Electrician, Painter" required />
+          </div>
+
+          <div class="input-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="City or area" required />
+          </div>
+
+          <div class="input-group">
+            <label for="budget">Budget</label>
+            <input type="number" id="budget" placeholder="Enter your budget" required />
+          </div>
+
+          <div class="input-group">
+            <label for="image">Job Image (optional)</label>
+            <input type="file" id="image" accept="image/*" />
+          </div>
+
+          <button type="submit" class="btn">Post Job</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
