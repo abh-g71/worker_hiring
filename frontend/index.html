@@ -3,35 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Worker Hiring Portal</title>
+  <title>Worker Hiring App</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Worker Registration</h1>
-    <form id="workerForm">
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" placeholder="Enter worker name" required />
-      </div>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>Worker Hiring</h1>
+      <p>Register to offer your services</p>
+    </header>
 
-      <div class="form-group">
-        <label for="skill">Skill</label>
-        <input type="text" id="skill" placeholder="e.g. Electrician, Plumber" required />
-      </div>
+    <main class="form-wrapper">
+      <div class="form-card">
+        <h2>Worker Registration</h2>
+        <form id="workerForm">
+          <div class="input-group">
+            <label for="profile">Profile Picture</label>
+            <input type="file" id="profile" accept="image/*" />
+          </div>
 
-      <div class="form-group">
-        <label for="location">Location</label>
-        <input type="text" id="location" placeholder="Enter city or area" required />
-      </div>
+          <div class="input-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required />
+          </div>
 
-      <div class="form-group">
-        <label for="phone">Contact Number</label>
-        <input type="tel" id="phone" placeholder="Enter phone number" required />
-      </div>
+          <div class="input-group">
+            <label for="skill">Skill</label>
+            <input type="text" id="skill" placeholder="e.g. Electrician, Plumber" required />
+          </div>
 
-      <button type="submit" class="btn">Register Worker</button>
-    </form>
+          <div class="input-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="City or area" required />
+          </div>
+
+          <div class="input-group">
+            <label for="phone">Contact Number</label>
+            <input type="tel" id="phone" placeholder="Enter phone number" required />
+          </div>
+
+          <button type="submit" class="btn">Register</button>
+        </form>
+        <p class="switch-link">
+           Are you a customer? <a href="customer.html">Post a Job</a>
+        </p>
+      </div>
+    </main>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Available Workers - Worker Hiring App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <h1>Available Workers</h1>
+      <p>Find nearby workers and hire instantly</p>
+    </header>
+
+    <!-- Worker Cards Container -->
+    <main class="workers-wrapper" id="workersContainer">
+      <!-- Worker cards will be injected here dynamically -->
+    </main>
+
+    <!-- Navigation Link -->
+    <p class="switch-link">
+      Go back to <a href="customer.html">Post a Job</a>
+    </p>
+  </div>
+
+  <!-- JS for dynamic worker cards -->
+  <script>
+    const workers = [
+      {
+        name: "John Doe",
+        skill: "Electrician",
+        location: "Downtown",
+        status: "available",
+        img: "images/profile1.jpg"
+      },
+      {
+        name: "Jane Smith",
+        skill: "Plumber",
+        location: "Uptown",
+        status: "busy",
+        img: "images/profile2.jpg"
+      },
+      {
+        name: "Mike Johnson",
+        skill: "Painter",
+        location: "Midtown",
+        status: "available",
+        img: "images/profile3.jpg"
+      }
+    ];
+
+    const container = document.getElementById("workersContainer");
+
+    workers.forEach(worker => {
+      const card = document.createElement("div");
+      card.classList.add("worker-card");
+
+      card.innerHTML = `
+        <img src="${worker.img}" alt="Worker Profile" class="worker-img" />
+        <div class="worker-info">
+          <h3>${worker.name}</h3>
+          <p>${worker.skill}</p>
+          <p>Location: ${worker.location}</p>
+          <span class="availability ${worker.status === "available" ? "available" : "busy"}">
+            ${worker.status === "available" ? "🟢 Available" : "🔴 Busy"}
+          </span>
+        </div>
+        <button class="btn hire-btn" ${worker.status === "busy" ? "disabled" : ""}>
+          Hire
+        </button>
+      `;
+
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>
